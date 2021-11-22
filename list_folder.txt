@@ -1,0 +1,11 @@
+Desktop
+Documents
+Downloads
+Music
+Pictures
+Videos
+3D Objects
+Contacts
+Favorites
+Saved Games
+Searches
