@@ -72,7 +72,7 @@ goto complete
 
 :auto_backup
 rem 6. Auto Backup Data
-for /f "delims=" %%i in (list_folder.txt) do robocopy "C:\Users\%username%\%%i" "D:\BackupDataCauto\%username%\%%i" /z /s /e /mt:16 /r:5 /w:5
+for /f "delims=;" %%i in ("Desktop;Documents;Favorites;Links;Music;Pictures;Saved Games;Videos") do robocopy "C:\Users\%username%\%%i" "D:\BackupDataCauto\%username%\%%i" /z /s /e /mt:16 /r:5 /w:5
 echo Auto Backup.
 goto complete
 
