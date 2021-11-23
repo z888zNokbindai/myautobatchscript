@@ -19,8 +19,8 @@ echo ===== mY fUvKiNg ToOlS =====
 echo.
 set /p menu=Input Number:
 
-if %menu% == 1 (goto installchoco
-) else (if %menu% == 2 (goto install_choco
+if %menu% == 1 (goto install_choco
+) else (if %menu% == 2 (goto insatll_software_choco
 ) else (if %menu% == 3 (goto install_software_ninite
 ) else (if %menu% == 4 (goto change_tz
 ) else (if %menu% == 5 (goto change_rg
@@ -33,8 +33,7 @@ if %menu% == 1 (goto installchoco
 
 :install_choco
 rem 1. Install Chocolatey
-powershell -command "Set-ExecutionPolicy AllSigned"
-powershell -command "Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))"
+powershell -command "Set-ExecutionPolicy AllSigned;Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))"
 echo Install Chocolatey
 goto complete
 
